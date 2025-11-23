@@ -54,6 +54,7 @@ function PatientSidebar({ open, setOpen }) {
         <SheetContent
           side="left"
           className="w-64 pt-2 pr-2 [&>button]:top-2 [&>button]:right-2 [&>button]:scale-75 [&>button]:bg-gray-200 [&>button]:hover:bg-gray-300"
+          aria-describedby="patient-panel-sidebar"
         >
           <div className="flex flex-col h-full">
             <SheetHeader className="border-b">
