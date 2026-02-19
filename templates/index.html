@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Medical AI Chatbot</title>
+    <style>
+        body { font-family: Arial; margin: 40px; }
+        #chatBox {
+            border: 1px solid #ccc;
+            padding: 10px;
+            height: 400px;
+            overflow-y: auto;
+            margin-bottom: 10px;
+        }
+        input {
+            width: 80%;
+            padding: 8px;
+        }
+        button {
+            padding: 8px 12px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Medical AI Chatbot</h2>
+
+<div id="chatBox"></div>
+
+<input type="text" id="messageInput" placeholder="Type your message..." />
+<button onclick="sendMessage()">Send</button>
+
+<script>
+async function sendMessage() {
+    const input = document.getElementById("messageInput");
+    const chatBox = document.getElementById("chatBox");
+
+    if (!input) {
+        console.error("messageInput not found");
+        return;
+    }
+
+    const message = input.value.trim();
+    if (!message) return;
+
+    addMessage("You", message);
+    input.value = "";
+
+    try {
+        const response = await fetch("/chat", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                session_id: "demo_user",
+                message: message
+            })
+        });
+
+        const text = await response.text();  // IMPORTANT FIX
+
+        addMessage("Bot", text);
+
+    } catch (error) {
+        console.error("Error:", error);
+        addMessage("Bot", "⚠️ Error connecting to server.");
+    }
+}
+
+function addMessage(sender, message) {
+    const chatBox = document.getElementById("chatBox");
+    const msgDiv = document.createElement("div");
+    msgDiv.innerHTML = `<strong>${sender}:</strong> ${message.replace(/\n/g, "<br>")}`;
+    chatBox.appendChild(msgDiv);
+    chatBox.scrollTop = chatBox.scrollHeight;
+}
+</script>
+
+</body>
+</html>

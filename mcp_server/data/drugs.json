@@ -1,0 +1,12 @@
+{
+  "Aspirin": {
+    "usage": "Used to reduce pain, fever, and inflammation. Often used in suspected heart attack.",
+    "common_side_effects": ["Stomach irritation", "Bleeding risk"],
+    "contraindications": ["Active bleeding", "Severe liver disease"]
+  },
+  "Vitamin B12": {
+    "usage": "Used to treat Vitamin B12 deficiency and megaloblastic anemia.",
+    "common_side_effects": ["Mild diarrhea", "Itching"],
+    "contraindications": ["Hypersensitivity to cobalamin"]
+  }
+}

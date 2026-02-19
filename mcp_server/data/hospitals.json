@@ -1,0 +1,62 @@
+{
+  "Hyderabad": [
+    {
+      "id": "hyd_apollo_01",
+      "name": "Apollo Hospitals",
+      "type": "Multi-Specialty",
+      "specialties": ["Cardiology", "Neurology", "Emergency", "Pulmonology"],
+      "address": "Jubilee Hills, Hyderabad",
+      "contact": "+91-40-2360-7777",
+      "emergency_available": true,
+      "icu_available": true,
+      "ambulance_service": true
+    },
+    {
+      "id": "hyd_care_02",
+      "name": "CARE Hospitals",
+      "type": "Cardiac Specialty",
+      "specialties": ["Cardiology", "Emergency"],
+      "address": "Banjara Hills, Hyderabad",
+      "contact": "+91-40-6810-6500",
+      "emergency_available": true,
+      "icu_available": true,
+      "ambulance_service": true
+    },
+    {
+      "id": "hyd_yashoda_03",
+      "name": "Yashoda Hospitals",
+      "type": "Multi-Specialty",
+      "specialties": ["Orthopedics", "Neurology", "Emergency"],
+      "address": "Somajiguda, Hyderabad",
+      "contact": "+91-40-4567-4567",
+      "emergency_available": true,
+      "icu_available": true,
+      "ambulance_service": true
+    }
+  ],
+
+  "Bangalore": [
+    {
+      "id": "blr_manipal_01",
+      "name": "Manipal Hospitals",
+      "type": "Multi-Specialty",
+      "specialties": ["Cardiology", "Nephrology", "Emergency"],
+      "address": "Old Airport Road, Bangalore",
+      "contact": "+91-80-2502-4444",
+      "emergency_available": true,
+      "icu_available": true,
+      "ambulance_service": true
+    },
+    {
+      "id": "blr_fortis_02",
+      "name": "Fortis Hospital",
+      "type": "Cardiac Specialty",
+      "specialties": ["Cardiology", "Emergency"],
+      "address": "Bannerghatta Road, Bangalore",
+      "contact": "+91-80-6621-4444",
+      "emergency_available": true,
+      "icu_available": true,
+      "ambulance_service": true
+    }
+  ]
+}
